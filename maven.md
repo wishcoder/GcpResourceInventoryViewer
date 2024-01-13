@@ -1,5 +1,6 @@
 > [!TIP]
 > ### Google Cloud Platform - Bill of materials
+
 <dependency>
     <groupId>com.google.cloud</groupId>
     <artifactId>libraries-bom</artifactId>
