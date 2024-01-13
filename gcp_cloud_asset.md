@@ -32,10 +32,10 @@ You might need additional permissions at the project level to access specific re
 ## 5. Considerations:
 
 - google-cloud-asset incurs additional costs based on the amount of data stored and queries performed.
-    - Data storage:
+    - **Data storage**:
         - $0.0025 per GB per month for the first 10 TB of data stored.
         - $0.0020 per GB per month for data stored over 10 TB.
-    - API calls:
+    - **API calls**:
         - Free quota: Up to 50,000 API calls per month are free.
         - Excess API calls: $0.005 per 1000 API calls after the free quota is exhausted.
 
