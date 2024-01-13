@@ -61,11 +61,13 @@ try (AssetServiceClient client = AssetServiceClient.create()) {
     // Handle exceptions
 }
 ```
+**7. Supported asset types:**
+[https://cloud.google.com/asset-inventory/docs/supported-asset-types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
 
-**6. Filter Active/Running Resources:**
+**8. Filter Active/Running Resources:**
 - Iterate through the response.getResultsList() and check the resource.getState() property to filter for active or running resources based on your criteria.
 - Extract relevant information from each resource as needed.
 
-**7. Store or Export Data:**
+**9. Store or Export Data:**
 - Choose a suitable format (e.g., CSV, JSON, database) to store or export the list of active/running resources for further analysis or reporting.
 
