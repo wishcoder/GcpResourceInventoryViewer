@@ -10,13 +10,9 @@
 </dependency>
 ```
 
-Java idiomatic client for [Google Cloud Resource Manager](https://cloud.google.com/resource-manager)
-
-
 > [!TIP]
 > ### Google Cloud Resource Manager
-> Java idiomatic client for [Google Cloud Resource Manager](https://pages.github.com/](https://cloud.google.com/resource-manager)
-Java idiomatic client for [Google Cloud Resource Manager](https://pages.github.com/](https://cloud.google.com/resource-manager)
+> Java idiomatic client for [Google Cloud Resource Manager](https://cloud.google.com/resource-manager)
 ```
 <dependency>
     <groupId>com.google.cloud</groupId>
