@@ -1,5 +1,4 @@
-# GcpResourceInventoryViewer
-GCP Resource Inventory Viewer
+# GCP Resource Inventory Viewer
 
 ## Compute Engine IAM roles and permissions
 https://cloud.google.com/compute/docs/access/iam
