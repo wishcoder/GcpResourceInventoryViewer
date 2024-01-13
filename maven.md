@@ -13,7 +13,7 @@
 
 Java idiomatic client for [Google Cloud Resource Manager](https://pages.github.com/](https://cloud.google.com/resource-manager)
 
-This site was built using [GitHub Pages](https://pages.github.com/)
+Java idiomatic client for [Google Cloud Resource Manager]([https://pages.github.com](https://pages.github.com/](https://cloud.google.com/resource-manager)/)
 
 
 > [!TIP]
