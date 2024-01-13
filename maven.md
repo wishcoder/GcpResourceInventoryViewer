@@ -21,7 +21,9 @@
 ```
 
 > [!TIP]
-> ### Google Cloud Container - Google Kubernetes Engine API
+> ### Google Cloud Container - Including GKE Containers
+> Java idiomatic client for [Google Cloud Container](https://cloud.google.com/compute/docs/containers)
+> 
 ```
 <dependency>
     <groupId>com.google.cloud</groupId>
@@ -31,6 +33,7 @@
 
 > [!TIP]
 > ### Google Compute Engine
+> [Compute Engine](https://cloud.google.com/compute?hl=en) delivers configurable virtual machines running in Google's data centers with access to high-performance. 
 ```
 <dependency>
     <groupId>com.google.cloud</groupId>
@@ -40,6 +43,7 @@
 
 > [!TIP]
 > ### Google Asset Inventory
+> Java idiomatic client for [Google Cloud Asset](https://cloud.google.com/security/products/asset-inventory) 
 ```
 <dependency>
     <groupId>com.google.cloud</groupId>
