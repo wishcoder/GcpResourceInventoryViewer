@@ -1,5 +1,6 @@
 > [!TIP]
 > ### Google Cloud Platform - Bill of materials
+> A compatible set of Google Cloud open source libraries. Document: https://cloud.google.com/java/docs/bom 
 ```
 <dependency>
     <groupId>com.google.cloud</groupId>
@@ -11,6 +12,7 @@
 
 > [!TIP]
 > ### Google Cloud Resource Manager
+> Java idiomatic client for [Google Cloud Resource Manager](https://pages.github.com/](https://cloud.google.com/resource-manager) 
 ```
 <dependency>
     <groupId>com.google.cloud</groupId>
