@@ -41,4 +41,10 @@ You might need additional permissions at the project level to access specific re
 
 - It might not be the best option if you only need data from a handful of specific services.
 
+## 6. Google Cloud Asset Inventory does include containers in GKE, but with some nuances to consider:
+- Container Inventory: It captures information about GKE clusters, nodes, pods, and deployments, but it doesn't provide granular details about individual containers within pods.
+- Container Images: It tracks container images stored in Artifact Registry, but not those pulled from external registries.
+- To obtain more comprehensive container data, you'll likely need to combine Cloud Asset Inventory with other tools or services:
+  - GKE APIs or Client Libraries: Use these to directly query the GKE API for detailed information about containers, images, and their configurations.
+    
 Overall, google-cloud-asset can be a powerful tool for generating a comprehensive list of active and running resources across your GCP environment at the organization level. Weigh its advantages and costs against your specific needs and development resources to determine if it's the right solution for your task.
