@@ -14,7 +14,7 @@ https://cloud.google.com/resource-manager/docs/access-control-org
 https://cloud.google.com/asset-inventory/docs/access-control
 
 ### Compute Engine API	    
-GCP service name: ** compute.googleapis.com **
+GCP service name: **compute.googleapis.com
 
 ### Google Kubernetes Engine API	    
 GCP service name: ** container.googleapis.com **
