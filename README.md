@@ -1,5 +1,5 @@
 # GCP Resource Inventory Viewer
-![GCP Resource Inventory Viewer](gcp_assets_image.png)
+![GCP Resource Inventory Viewer](cloud_assets_image.png)
 
 ## Compute Engine IAM roles and permissions
 https://cloud.google.com/compute/docs/access/iam
