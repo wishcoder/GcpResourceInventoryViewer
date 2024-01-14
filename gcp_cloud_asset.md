@@ -1,6 +1,7 @@
-## 1. What is google-cloud-asset?
 ![GCP Resource Inventory Viewer](cloud_assets_image.png)
 
+
+## 1. What is google-cloud-asset?
 
 **google-cloud-asset** isn't a Java Client Library but rather a managed service that tracks and provides inventory data for your Google Cloud resources. It offers a unified view of various resources across services like GKE, GCE, App Engine, and more, including:
 - Compute resources like VMs, disks, and networks.
