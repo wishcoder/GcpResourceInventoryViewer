@@ -87,7 +87,24 @@ protoPayload.vpcFlow.srcRegion="us-central1"
 protoPayload.vpcFlow.destRegion="us-east1"
 ```
 
+# Organization level query for VPC Flow Logs for all resources type to identify traffic from resources in 'us-central1' accessing resources in 'us-east1':
 
+## Create a Combined Query:
 
+```
+resource.type="gce_subnetwork"
+logName:"organizations/YOUR_ORGANIZATION_ID/logs/"
+protoPayload.vpcFlow.srcRegion="us-central1"
+protoPayload.vpcFlow.destRegion="us-east1"
+```
 
+## Explanation:
+- **Broader Log Coverage:** The logName filter only specifies the organization-level logs path, removing the compute.googleapis.com%2Fvpc_flows part. This captures a wider range of network communication logs, not limited to compute resources.
+- **Essential Filters:** The query retains filters for resource.type, srcRegion, and destRegion to focus on relevant subnetwork logs and the specified regions.
+
+## Additional Considerations:
+- **Log Availability:** Ensure that your organization's logging configuration captures the desired network communication logs beyond compute resources.
+- **Resource-Specific Insights:** If you need to analyze traffic for particular resource types, add filters like resource.labels.resource_type="your_resource_type".
+- **Log Volume:** Capturing a broader range of logs might increase log volume and processing time. Consider adjusting the time range or adding more specific filters as needed.
+- **BigQuery for Complex Analysis:** For comprehensive analysis and aggregation across multiple resource types, consider exporting logs to BigQuery and using its SQL capabilities.
 
