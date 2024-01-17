@@ -100,7 +100,8 @@ for (Instance instance : instances.getItems()) {
   - Access various properties like name, machine type, zone, status, and more.
 
 
-# "GKE Node" to the description
+
+# "GKE Node" in the description of virtual machines (VMs) that are part of a Google Kubernetes Engine (GKE) cluster
 
 Compute Engine typically prepends "GKE Node" to the description of virtual machines (VMs) that are part of a Google Kubernetes Engine (GKE) cluster. This helps differentiate GKE-managed nodes from other Compute Engine instances you might have in your project.
 
