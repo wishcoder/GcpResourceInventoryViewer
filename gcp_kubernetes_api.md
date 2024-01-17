@@ -58,5 +58,50 @@ PodList podList = container.projects().zones().clusters().pods().list(projectId,
 - Refer to the official documentation for detailed usage instructions and examples: https://cloud.google.com/kubernetes-engine/docs/reference/libraries
 
 
+# Retrieve GKE Nodes in a given GCP region:
+
+## 1. Create a Compute Engine API client:
+
+```
+Compute compute = new Compute.Builder(
+    GoogleNetHttpTransport.newTrustedTransport(),
+    JacksonFactory.getDefaultInstance(),
+    credential)
+    .setApplicationName("your-application-name")
+    .build();
+```
+
+## 2. Node Information Retrieval:
+
+```
+String projectId = "your-project-id";
+String region = "your-region";
+
+InstanceList instances = compute.instances().list(projectId, region).execute();
+
+// Iterate through the instances and filter for GKE nodes
+for (Instance instance : instances.getItems()) {
+    String description = instance.getDescription();
+    if (description != null && description.startsWith("GKE Node")) {
+        // Process the node information
+        System.out.println("Node name: " + instance.getName());
+        System.out.println("Machine type: " + instance.getMachineType());
+        System.out.println("Zone: " + instance.getZone());
+        // ... access other node properties as needed
+    }
+}
+```
+
+## 3. Key points:
+
+- **Filtering for GKE Nodes:**
+  - The Compute Engine API lists all instances, so filter for those with descriptions starting with "GKE Node."
+- **Node Information:**
+  - Access various properties like name, machine type, zone, status, and more.
+
+
+
+
+
 
 
