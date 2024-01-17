@@ -100,8 +100,32 @@ for (Instance instance : instances.getItems()) {
   - Access various properties like name, machine type, zone, status, and more.
 
 
+# "GKE Node" to the description
 
+Compute Engine typically prepends "GKE Node" to the description of virtual machines (VMs) that are part of a Google Kubernetes Engine (GKE) cluster. This helps differentiate GKE-managed nodes from other Compute Engine instances you might have in your project.
 
+## Here's how you can observe this behavior:
+
+### Google Cloud Console:
+- Navigate to Compute Engine > VM instances.
+- Examine the Description column for VMs within a GKE cluster. You'll notice "GKE Node" at the beginning of the description.
+
+### Google Cloud CLI:
+- Use the gcloud compute instances list command to list instances.
+- The output includes a description field, where you'll find "GKE Node" for GKE nodes.
+
+### Compute Engine API:
+- When listing instances through the Compute Engine API, the description field will also display "GKE Node" for GKE nodes.
+
+## Purpose:
+- **Identification:** This convention aids in easily identifying VMs that are part of GKE clusters within your project.
+- **Management:** It's crucial to avoid directly modifying GKE nodes through the Compute Engine API or console, as GKE manages them. Direct modifications could disrupt cluster operations.
+- **Visibility:** The description provides visibility into the purpose of these VMs and their association with GKE.
+
+## Additional Considerations:
+-- **Custom Descriptions:** While "GKE Node" is the standard prefix, you might encounter custom descriptions in specific cases, such as when nodes are created with unique labels or annotations.
+-- **Filtering:** You can leverage this pattern to filter and manage GKE nodes using tools or scripts that interact with the Compute Engine API.
+    
 
 
 
