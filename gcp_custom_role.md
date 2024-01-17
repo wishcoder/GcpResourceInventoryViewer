@@ -5,7 +5,8 @@
   - container.clusters.list 
   - container.clusters.get
   - container.deployments.list
-  - container.nodes.list 
+  - container.nodes.list
+  - container.nodes.get
   - container.pods.list
   - container.pods.get
     
