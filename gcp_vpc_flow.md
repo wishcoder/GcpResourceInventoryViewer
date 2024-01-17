@@ -41,3 +41,31 @@
 #### Managing Flow Logs:
 - Adjusting settings
 - Deleting logs
+
+
+# Query for VPC Flow Logs to identify traffic from resources in 'us-central1' accessing resources in 'us-east1':
+
+## In Cloud Logging:
+
+```
+resource.type="gce_subnetwork"
+logName:"projects/YOUR_PROJECT_ID/logs/compute.googleapis.com%2Fvpc_flows"
+protoPayload.vpcFlow.srcVpc="projects/YOUR_PROJECT_ID/global/networks/YOUR_VPC_NAME"
+protoPayload.vpcFlow.srcRegion="us-central1"
+protoPayload.vpcFlow.destVpc="projects/YOUR_PROJECT_ID/global/networks/YOUR_VPC_NAME"
+protoPayload.vpcFlow.destRegion="us-east1"
+```
+
+## Breakdown:
+- resource.type="gce_subnetwork": Focuses on logs from subnetworks.
+- logName: Specifies the VPC Flow Logs log name.
+- protoPayload.vpcFlow.srcVpc: Filters for traffic originating from a specific VPC.
+- protoPayload.vpcFlow.srcRegion: Narrows down to traffic from the 'us-central1' region.
+- protoPayload.vpcFlow.destVpc: Filters for traffic destined for a specific VPC.
+- protoPayload.vpcFlow.destRegion: Restricts to traffic going to the 'us-east1' region.
+
+## Key Points:
+- **Replace placeholders:** Ensure you replace YOUR_PROJECT_ID and YOUR_VPC_NAME with the appropriate values.
+- **Time range:** Adjust the time range in Cloud Logging to cover your desired analysis period.
+- **Further filtering:** Add more filters as needed to refine results (e.g., specific IP addresses, protocols, ports).
+- **BigQuery:** For complex analysis, export Flow Logs to BigQuery and use its SQL capabilities for advanced queries.
