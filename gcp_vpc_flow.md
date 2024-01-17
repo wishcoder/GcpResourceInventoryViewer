@@ -69,3 +69,25 @@ protoPayload.vpcFlow.destRegion="us-east1"
 - **Time range:** Adjust the time range in Cloud Logging to cover your desired analysis period.
 - **Further filtering:** Add more filters as needed to refine results (e.g., specific IP addresses, protocols, ports).
 - **BigQuery:** For complex analysis, export Flow Logs to BigQuery and use its SQL capabilities for advanced queries.
+
+
+# Organization level query for VPC Flow Logs to identify traffic from resources in 'us-central1' accessing resources in 'us-east1':
+
+## Enable Organization-Level Logs:
+- Ensure that "Organization-level logging" is enabled in your Google Cloud organization. This allows you to view and query logs across all projects within the organization.
+
+## Create a Combined Query:
+
+Construct a query that pulls logs from matching subnetworks across all projects:
+
+```
+resource.type="gce_subnetwork"
+logName:"organizations/YOUR_ORGANIZATION_ID/logs/compute.googleapis.com%2Fvpc_flows"
+protoPayload.vpcFlow.srcRegion="us-central1"
+protoPayload.vpcFlow.destRegion="us-east1"
+```
+
+
+
+
+
