@@ -125,6 +125,7 @@ Compute Engine typically prepends "GKE Node" to the description of virtual machi
 
 ## Additional Considerations:
 -- **Custom Descriptions:** While "GKE Node" is the standard prefix, you might encounter custom descriptions in specific cases, such as when nodes are created with unique labels or annotations.
+
 -- **Filtering:** You can leverage this pattern to filter and manage GKE nodes using tools or scripts that interact with the Compute Engine API.
     
 
