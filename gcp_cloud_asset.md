@@ -71,12 +71,15 @@ You might need additional permissions at the project level to access specific re
 ### Key Points:
 
 **Level of Detail:** The Asset Inventory tool and Assets API typically provide a high-level overview of GKE resources, including their names, types, and basic configurations.
+
 **Customization:** You can use filters and queries to refine the results and focus on specific resource types or attributes.
+
 **Additional Information:** For more granular details about individual resources, you might need to use the GKE API directly.
 
 ### Additional Considerations:
 
 **Node Labels:** Node labels, which are key-value pairs attached to nodes, are usually not included in the Asset Inventory results.
+
 **Cluster Network Information:** Detailed cluster network information, such as IP addresses and subnets, might not be fully available through these tools.
 
 Overall, google-cloud-asset can be a powerful tool for generating a comprehensive list of active and running resources across your GCP environment at the organization level. Weigh its advantages and costs against your specific needs and development resources to determine if it's the right solution for your task.
