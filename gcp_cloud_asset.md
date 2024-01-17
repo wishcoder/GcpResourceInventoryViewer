@@ -50,6 +50,33 @@ You might need additional permissions at the project level to access specific re
 - To obtain more comprehensive container data, you'll likely need to combine Cloud Asset Inventory with other tools or services:
   - GKE APIs or Client Libraries: Use these to directly query the GKE API for detailed information about containers, images, and their configurations.
     
+## 7. GKE resources typically returned by the Asset Inventory tool and Assets API:
+- **Clusters:**
+    - Representations of GKE clusters, including their names, locations, and configurations.
+- **Nodes:**
+    - Individual virtual machines within GKE clusters, providing their names, machine types, and status.
+- **Namespaces:**
+    - Virtual clusters within a GKE cluster, used for resource isolation and organization.
+- **Pods:**
+    - Groups of containers that make up the basic units of deployment in Kubernetes.
+- **Deployments:**
+    - Objects that manage the lifecycle of pods, ensuring a specified number of replicas are always running.
+- **Services:**
+    - Abstractions that define a logical set of pods and a policy for accessing them.
+- **PersistentVolumeClaims (PVCs):**
+    - Requests for storage resources within a GKE cluster, used by pods to access persistent data.
+- **ServiceAccounts:**
+    - Identities used by pods to interact with the Kubernetes API.
 
+### Key Points:
+
+**Level of Detail:** The Asset Inventory tool and Assets API typically provide a high-level overview of GKE resources, including their names, types, and basic configurations.
+**Customization:** You can use filters and queries to refine the results and focus on specific resource types or attributes.
+**Additional Information:** For more granular details about individual resources, you might need to use the GKE API directly.
+
+### Additional Considerations:
+
+**Node Labels:** Node labels, which are key-value pairs attached to nodes, are usually not included in the Asset Inventory results.
+**Cluster Network Information:** Detailed cluster network information, such as IP addresses and subnets, might not be fully available through these tools.
 
 Overall, google-cloud-asset can be a powerful tool for generating a comprehensive list of active and running resources across your GCP environment at the organization level. Weigh its advantages and costs against your specific needs and development resources to determine if it's the right solution for your task.
