@@ -2,7 +2,7 @@
 - Cloud Asset Inventory is **valuable for asset management and compliance**, but not designed for real-time pod status monitoring
 
 
-### Cloud Asset Inventory to find all RUNNING resources in GKE, along with key considerations and insights:
+- ### Cloud Asset Inventory to find all RUNNING resources in GKE, along with key considerations and insights:
 
 ```
 (asset_type="container.googleapis.com/Deployment" OR
@@ -17,7 +17,7 @@ AND resource.data.status.conditions.state = "RUNNING"
 - Pod Status: For individual pod status, access the Kubernetes API directly or use tools like kubectl.
 
  
-### Cloud Asset Inventory query that will return GKE Deployment resources
+- ### Cloud Asset Inventory query that will return GKE Deployment resources
 
 ```
 asset_type = "container.googleapis.com/Deployment"
@@ -31,7 +31,7 @@ asset_type = "container.googleapis.com/Deployment"
 - Labels and annotations
 - Resource references (e.g., pods, services)
 
-### Retrieving Pod-Related Information from Cloud Asset Inventory
+- ### Retrieving Pod-Related Information from Cloud Asset Inventory
 
 ```
 asset_type="container.googleapis.com/Pod"
