@@ -24,7 +24,7 @@
 
 #### Resource Scope: 
 - If you have a limited number of resources, Cloud Asset Inventory might be sufficient. For complex environments, consider additional tools for comprehensive management.
-- 
+  
 #### Reporting and Audit Requirements: 
 - Evaluate how Cloud Asset Inventory's data aligns with your reporting and audit needs. It might be necessary to combine data from multiple sources or use specialized reporting tools.
 
