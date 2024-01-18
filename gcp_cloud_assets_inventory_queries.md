@@ -1,5 +1,6 @@
 # Use Cloud Asset Inventory for asset management and compliance
 - Cloud Asset Inventory is **valuable for asset management and compliance**, but not designed for real-time pod status monitoring
+- Cloud Asset Inventory primarily tracks resource metadata, configuration, and relationships, not real-time status details like pod health
 
 
 ### 1. Cloud Asset Inventory to find all RUNNING resources in GKE, along with key considerations and insights:
