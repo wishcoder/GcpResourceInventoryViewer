@@ -6,7 +6,7 @@
 
 #### FFIEC 40.10: 
 - Cloud Asset Inventory can provide valuable information for FFIEC 40.10 compliance by listing and tracking containerized assets like deployments, pods, and their relationships. However, it might not capture all required details like pod runtime status or security configurations.
-- 
+ 
 #### Other Regulations: 
 - For other regulations, assess the specific data requirements and compare them to Cloud Asset Inventory's capabilities.
 
