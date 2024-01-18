@@ -1,3 +1,18 @@
+## Cloud Asset Inventory to find all RUNNING resources in GKE, along with key considerations and insights:
+
+```
+(asset_type="container.googleapis.com/Deployment" OR
+ asset_type="container.googleapis.com/ReplicaSet" OR
+ asset_type="container.googleapis.com/StatefulSet" OR
+ asset_type="container.googleapis.com/DaemonSet")
+AND resource.data.status.conditions.state = "RUNNING"
+```
+
+#### Key Considerations:
+- Inventory Delay: Cloud Asset Inventory might not reflect real-time status. Consider potential delays.
+- Pod Status: For individual pod status, access the Kubernetes API directly or use tools like kubectl.
+
+ 
 ## Cloud Asset Inventory query that will return GKE Deployment resources
 
 ```
