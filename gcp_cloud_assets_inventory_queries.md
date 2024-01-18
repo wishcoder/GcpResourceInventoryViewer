@@ -30,3 +30,18 @@ asset_type = "container.googleapis.com/Deployment"
 - Creation time
 - Labels and annotations
 - Resource references (e.g., pods, services)
+
+### Retrieving Pod-Related Information from Cloud Asset Inventory
+
+```
+asset_type="container.googleapis.com/Pod"
+```
+
+##### The query will return a list metadata such as:
+- name
+- namespace
+- creation time-
+- labels
+
+
+
