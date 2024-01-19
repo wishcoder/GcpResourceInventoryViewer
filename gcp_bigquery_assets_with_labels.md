@@ -12,7 +12,10 @@ WITH
     SELECT
       STRING_AGG(CONCAT(kv.key, ':', kv.value), ', ')
     FROM
-      UNNEST(resource.data.labels) AS kv ) AS LABELS
+      UNNEST(resource.data.labels) AS kv ) AS LABELS,
+    SELECT value FROM UNNEST(resource.data.labels) WHERE key = 'app_id') AS app_id,
+    SELECT value FROM UNNEST(resource.data.labels) WHERE key = 'component_id') AS component_id,
+    SELECT value FROM UNNEST(resource.data.labels) WHERE key = 'environmant') AS environmant
   FROM
     compute_googleapis_com_Instance
   WHERE
