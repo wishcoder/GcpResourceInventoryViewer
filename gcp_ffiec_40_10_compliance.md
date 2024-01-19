@@ -37,3 +37,39 @@
 - Consult with legal or compliance professionals for guidance on your specific regulation and its data requirements.
 - Explore advanced configurations and filters within Cloud Asset Inventory to extract relevant information.
 - Stay informed about updates and improvements to Cloud Asset Inventory's capabilities for compliance purposes.
+
+# The most critical fields for compliance purposes in an Asset query
+
+The most critical fields for compliance purposes in an Asset query depend on the specific regulations or compliance frameworks you need to adhere to. However, here are some general fields that are often important:
+
+## Resource Identification:
+- **Asset Type:** Categorizes the resource (e.g., VM, Cloud Storage bucket, Kubernetes cluster).
+- **Resource Name:** Unique identifier within the project.
+- **Resource ID:** Globally unique identifier across GCP.
+- **Project ID:** Project where the resource resides.
+
+## Resource Configuration and State:
+- **Creation Time:** Timestamp of the resource creation.
+- **Labels:** User-defined key-value pairs for tagging and categorization.
+- **Annotations:** System-defined annotations for resource state or configuration.
+- **Security Configuration:** Settings related to encryption, access control, or vulnerability management.
+- **Resource State:** Operational status (e.g., running, stopped, deleted).
+
+## Metadata and Relationships:
+- **Custom Metadata:** Key-value pairs added by users for additional context (e.g., application IDs, environment names, regulatory tags).
+- **Relationships:** Connections between resources, showing dependencies or belonging to a group.
+- **Resource History:** Audit trails tracking changes and snapshots of past states.
+
+## Additional Fields:
+- **Location:** Region and zone where the resource is deployed.
+- **Billing Information:** Cost associated with the resource.
+- **Compliance Data:** Information relevant for specific regulations (e.g., PCI-DSS compliance flags).
+
+## Remember:
+- **Tailor the query:** Adjust the fields based on the specific requirements of your compliance framework.
+- **Combine fields:** Use filters and conditions to narrow down results to relevant assets.
+- **Export data:** Export results to BigQuery or Cloud Storage for further analysis and reporting.
+- **Consider automation:** Automate asset queries for regular compliance checks and reporting.
+    
+
+
